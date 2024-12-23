@@ -1,0 +1,77 @@
+create folder
+
+root@DESKTOP-623DOIP:~# mkdir AIMCA
+
+root@DESKTOP-623DOIP:~# cd AIMCA
+
+create file
+
+root@DESKTOP-623DOIP:~/AIMCA# cat > BCA
+
+java
+
+dbms
+
+C
+
+Computer multimedia and Animation
+
+^C
+
+root@DESKTOP-623DOIP:~/AIMCA# cat > BBA
+
+advertisement
+
+marketing
+
+hr
+
+Accounting
+
+income tax
+
+^C
+
+root@DESKTOP-623DOIP:~/AIMCA# cat BCA
+
+java
+
+dbms
+
+C
+
+Computer multimedia and Animation
+
+delete file
+
+root@DESKTOP-623DOIP:~/AIMCA# cat BBA
+
+advertisement
+
+marketing
+
+hr
+
+Accounting
+
+income tax
+
+root@DESKTOP-623DOIP:~/AIMCA# rm BBA
+
+root@DESKTOP-623DOIP:~/AIMCA# ls
+
+BCA
+
+root@DESKTOP-623DOIP:~/AIMCA# rm BCA
+
+root@DESKTOP-623DOIP:~/AIMCA# ls
+
+delete folder
+
+root@DESKTOP-623DOIP:~/AIMCA# cd\
+
+>
+
+root@DESKTOP-623DOIP:~# rmdir AIMCA
+
+root@DESKTOP-623DOIP:~#
