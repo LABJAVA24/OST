@@ -1,0 +1,11 @@
+Code:
+
+d over dx [x^{n+1}over {n+1}] =x^2
+
+n<>-1 drarrow int x^2 dx=x^{n+1 }over { n+1 }+c 
+
+n<>-1
+
+newline
+
+x={-b +- sqrt{b^2-4ac}}over{ 2a}
