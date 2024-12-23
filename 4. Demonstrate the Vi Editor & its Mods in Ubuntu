@@ -1,0 +1,65 @@
+a. Command mod
+
+ k ,j ,M, L,( , ), H
+
+b. Insert mod
+
+ I a A o O r R
+
+c. ex Mode
+
+ wq, w fileName ,Searching and Replacing , Block delete commands
+
+a. Command Mod
+
+k : Moves the cursor up one line.
+
+j : Moves the cursor down one line.
+
+M : Move to middle of screen.
+
+L : Move to bottom of screen.
+
+( : Positions cursor to beginning of current sentence.
+
+) : Positions cursor to beginning of next sentence.
+
+H : Move to top of screen.
+
+b. Insert mod
+
+I : Inserts text at beginning of current line.
+
+a : Inserts text after current cursor location.
+
+•
+
+A : Inserts text at end of current line.
+
+o: Creates a new line for text entry below cursor location.
+
+O : Creates a new line for text entry above cursor location.
+
+r : Replace single character under the cursor with the next character typed.
+
+R : Replaces text from the cursor to right.
+
+c. ex Mode
+
+wq : Write and quit (save and exit).
+
+w fileName : Write to file called fileName (save as).
+
+Searching and Replacing in (ex Mode): vi also has powerful search and replace capabilities. The formal 
+
+syntax for searching is:
+
+:s/string
+
+Block delete commands in (x mode): need to press ESC and then commands will be followed by 
+
+colon(:).
+
+:1d delete the line 1.
+
+:1,5d deletes the lines from 1 to 5.
