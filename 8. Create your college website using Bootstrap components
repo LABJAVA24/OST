@@ -1,0 +1,17 @@
+STEPS :
+
+1. Create a new Folder in the system.
+
+2. Add / open the folder in VScode.
+
+3. Click on file option in VS code and create a new html file.
+
+ EX: 'filename.html' 
+
+4. Goto the browser and open "BOOTSTRAP" website.
+
+5. Scroll down and copy css and js link and paste it to the head section of html code.
+
+6. Add components like Navbar , img to the body section of html code.
+
+7. Then Click on run live server.
