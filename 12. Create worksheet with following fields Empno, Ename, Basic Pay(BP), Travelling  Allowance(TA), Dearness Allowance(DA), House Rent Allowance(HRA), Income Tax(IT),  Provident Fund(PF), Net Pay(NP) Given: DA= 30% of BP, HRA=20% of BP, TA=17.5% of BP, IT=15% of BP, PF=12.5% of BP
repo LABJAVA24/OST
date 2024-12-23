@@ -1,0 +1,23 @@
+Steps:-
+
+1. Open libre office Calc spreadsheet
+
+2. Enter the fie of Employee as given
+
+3. Calculate the DA, TA, HRA, IT, PF as a percentage on the basis of Basic Pay
+
+3.1: DA=Basicpay*30%
+
+3.2: HRA=Basicpay*20%
+
+3.3: TA=Basicpay*17.5%
+
+3.4: IT=Basicpay*15%
+
+3.5: PF=Basicpay*12.5%
+
+4. Calculate the Net Pay by using the formulae Gross Pay= DA+TA+HRA+BP 
+
+Deductions=IT+PF 
+
+5. Net Pay= Gross Pay-Deductions
