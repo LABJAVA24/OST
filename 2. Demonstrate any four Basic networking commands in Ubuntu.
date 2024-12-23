@@ -1,0 +1,93 @@
+1. Ifconfig
+
+Linux ifconfig stands for interface configurator.
+
+Basic information displayed upon using ifconfig are:
+
+1. IP address
+
+2. MAC address
+
+3. MTU(Maximum Transmission Unit)
+
+Output:
+
+This picture shows the IP address of 3 networks, Ethernet, local network, and WLAN.
+
+ root@DESKTOP-623DOIP:~# ifconfig
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+
+inet 172.21.171.14 netmask 255.255.240.0 broadcast 172.21.175.255
+
+ inet6 fe80::215:5dff:feec:78df prefixlen 64 scopeid 0x20<link>
+
+ ether 00:15:5d:ec:78:df txqueuelen 1000 (Ethernet)
+
+ RX packets 162 bytes 26333 (26.3 KB)
+
+ RX errors 0 dropped 0 overruns 0 frame 0
+
+ TX packets 14 bytes 1076 (1.0 KB)
+
+ TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING> mtu 65536
+
+ inet 127.0.0.1 netmask 255.0.0.0
+
+ inet6 ::1 prefixlen 128 scopeid 0x10<host>
+
+ loop txqueuelen 1000 (Local Loopback)
+
+ RX packets 0 bytes 0 (0.0 B)
+
+ RX errors 0 dropped 0 overruns 0 frame 0
+
+ TX packets 0 bytes 0 (0.0 B)
+
+ TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+2. Hostname –I
+
+Output:
+
+ to get your IP address in Ubuntu
+
+root@DESKTOP-623DOIP:~# hostname -I
+
+172.21.171.14
+
+ 3. netstat
+
+netstat command used to review each network connection and open sockets on the Linux 
+
+device. It provides connections, open sockets, routing tables information.
+
+root@DESKTOP-623DOIP:~# netstat
+
+Active Internet connections (w/o servers)
+
+Proto Recv-Q Send-Q Local Address Foreign Address State
+
+Active UNIX domain sockets (w/o servers)
+
+Proto RefCnt Flags Type State I-Node Path
+
+4.route
+
+route command is used to shows or modifies the system’s routing table. Using this command, 
+
+you can troubleshoot the network issue caused by a wrong entry in the system routing table. 
+
+Setting a routing table is very important to make the router work correctly.
+
+root@DESKTOP-623DOIP:~# route
+
+Kernel IP routing table
+
+Destination Gateway Genmask Flags Metric Ref Use Iface
+
+default DESKTOP-623DOIP 0.0.0.0 UG 0 0 0 eth0
+
+172.26.48.0 0.0.0.0 255.255.240.0 U 0 0 0 eth0
