@@ -1,0 +1,41 @@
+1. cat
+
+root@DESKTOP-623DOIP:~# cat > AIMCA
+
+BCA
+
+BBA
+
+kjjd
+
+dsd
+
+^C
+
+root@DESKTOP-623DOIP:~# cat > AITM
+
+CS
+
+MECH
+
+CIVIL
+
+2. rename same file
+
+root@DESKTOP-623DOIP:~# mv AITM ACFW
+
+root@DESKTOP-623DOIP:~# cat ACFW
+
+CS
+
+MECH
+
+CIVIL
+
+3.delete same file
+
+root@DESKTOP-623DOIP:~# rm ACFW
+
+root@DESKTOP-623DOIP:~# cat ACFW
+
+cat: ACFW: No such file or directory
