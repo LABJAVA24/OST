@@ -1,0 +1,39 @@
+Step 1. Start by updating the system package index. Launch a terminal window (Ctrl+Alt+T) and 
+
+run the following command:
+
+sudo apt update
+
+Updating the package index ensures you’re working with the latest software versions.
+
+root@DESKTOP-623DOIP:~# sudo apt update
+
+Fetched 15.3 MB in 6s (2540 kB/s)
+
+Reading package lists... Done
+
+Building dependency tree
+
+Reading state information... Done
+
+199 ckages can be upgraded. Run 'apt list --upgradable' to see them.
+
+ Step 2. Install Git from the default Ubuntu repository by running:
+
+ sudo apt install git
+
+root@DESKTOP-623DOIP:~# sudo apt install git
+
+Reading package lists... Done
+
+Building dependency tree
+
+Reading state information... Done
+
+ Step 3. Verify the installation and version by running:
+
+ git –version
+
+root@DESKTOP-623DOIP:~# git --version
+
+git version 2.25.1
