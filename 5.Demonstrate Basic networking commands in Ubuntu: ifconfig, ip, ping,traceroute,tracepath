@@ -1,0 +1,179 @@
+1. Ifconfig
+
+Linux ifconfig stands for interface configurator.
+
+Basic information displayed upon using ifconfig are:
+
+1. IP address
+
+2. MAC address
+
+3. MTU(Maximum Transmission Unit)
+
+ Output:
+
+ This picture shows the IP address of 3 networks, Ethernet, local network, and WLAN.
+
+ root@DESKTOP-623DOIP:~# ifconfig
+
+ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+
+ inet 172.21.171.14 netmask 255.255.240.0 broadcast 172.21.175.255
+
+ inet6 fe80::215:5dff:feec:78df prefixlen 64 scopeid 0x20<link>
+
+ ether 00:15:5d:ec:78:df txqueuelen 1000 (Ethernet)
+
+ RX packets 162 bytes 26333 (26.3 KB)
+
+ RX errors 0 dropped 0 overruns 0 frame 0
+
+ TX packets 14 bytes 1076 (1.0 KB)
+
+ TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING> mtu 65536
+
+ inet 127.0.0.1 netmask 255.0.0.0
+
+ inet6 ::1 prefixlen 128 scopeid 0x10<host>
+
+ loop txqueuelen 1000 (Local Loopback)
+
+ RX packets 0 bytes 0 (0.0 B)
+
+ RX errors 0 dropped 0 overruns 0 frame 0
+
+ TX packets 0 bytes 0 (0.0 B)
+
+ TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+
+2. IP
+
+The ip command helps view and configure routing, interfaces, network devices, and tunnels. 
+
+The ip command shows the help menu when used without any options, objects, or 
+
+commands:
+
+root@DESKTOP-623DOIP:~# ip
+
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+
+ ip [ -force ] -batch filename
+
+where OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+
+ tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+
+ netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+
+ vrf | sr | nexthop }
+
+ OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+
+ -h[uman-readable] | -iec | -j[son] | -p[retty] |
+
+ -f[amily] { inet | inet6 | mpls | bridge | link } |
+
+ -4 | -6 | -I | -D | -M | -B | -0 |
+
+ -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+
+ -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+
+ -c[olor]}
+
+Add the -V option to see the current version:
+
+The output prints the package and library version for the ip utility.
+
+root@DESKTOP-623DOIP:~# ip -V
+
+ip utility, iproute2-ss200127
+
+3. ping
+
+The ping command is a network utility for testing whether a host is reachable. The command 
+
+sends ICMP requests to a host (a computer or server) and measures the round-trip time (RTT).
+
+Pinging helps determine the network latency between two nodes and whether a network is 
+
+reachable.
+
+root@DESKTOP-623DOIP:~# ping google.com
+
+PING google.com (142.250.193.174) 56(84) bytes of data.
+
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=1 ttl=57 time=49.2 
+
+ms
+
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=2 ttl=57 time=49.9 
+
+ms
+
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=3 ttl=57 time=49.1 
+
+ms
+
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=4 ttl=57 time=48.2 
+
+ms
+
+64 bytes from maa05s26-in-f14.1e100.net (142.250.193.174): icmp_seq=5 ttl=57 time=49.2 
+
+ms
+
+^C
+
+--- google.com ping statistics ---
+
+6 packets transmitted, 5 received, 16.6667% packet loss, time 5008ms
+
+rtt min/avg/max/mdev = 48.195/49.130/49.896/0.544 ms
+
+4. Traceroute
+
+The traceroute command is a networking diagnostics tool available for Linux, macOS, and 
+
+Windows. The command tracks the route that packets take to reach a destination on a 
+
+TCP/IP network.
+
+Use the command to discover routing issues and bottlenecks by showing a packet's 
+
+intermediate hops while traveling from source to destination.
+
+ root@DESKTOP-623DOIP:~# traceroute google.com
+
+ traceroute to google.com (142.250.205.238), 30 hops max, 60 byte packets
+
+5. Tracepath
+
+ The tracepath command is similar to the traceroute command. The command identifies 
+
+paths and latencies from source to destination, mapping the router and network hops.
+root@DESKTOP-623DOIP:~# tracepath google.com
+
+1?: [LOCALHOST] pmtu 1500
+
+1: DESKTOP-623DOIP.mshome.net 0.241ms
+
+1: DESKTOP-623DOIP.mshome.net 0.129ms
+
+2: 192.168.1.1 2.243ms
+
+3:
+
+192.168.1.1 2.932ms pmtu 1492
+
+^C
+
+1 DESKTOP-623DOIP.mshome.net (172.31.16.1) 0.690 ms 0.653 ms 0.641 ms
+
+2 192.168.1.1 (192.168.1.1) 2.804 ms 2.791 ms 2.781 ms
+
+3 *
